@@ -1,10 +1,15 @@
 # Awesome GenAI Papers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated, up-to-speed reading list of the most impactful papers and blog posts in the Generative AI ecosystem.
+A curated reading list of impactful Generative AI papers and blog posts, with a guided foundations path and selected learning resources.
 
 This is not meant to be an exhaustive collection. It is a personal selection of the readings that left the strongest mark after going through dozens of papers, preprints, and deep dives every week. If someone asks you *"I want to understand GenAI better, where do I start?"*, this repository aims to be the link that I'd share.
 
+> **Looking for a starting point?** Follow the [foundations path](#foundations-from-neural-networks-to-llms), then choose a [deep dive or practical exercise](#selected-deep-dives--practice) for the topic you want to explore.
+
 ## Contents
+- [Learning Resources](#learning-resources)
+  - [Foundations: From Neural Networks to LLMs](#foundations-from-neural-networks-to-llms)
+  - [Selected Deep Dives & Practice](#selected-deep-dives--practice)
 - [Reasoning, Intelligence & Robustness](#reasoning-intelligence--robustness)
 - [Prompt Engineering & Optimization](#prompt-engineering--optimization)
 - [Alignment & Safety](#alignment--safety)
@@ -81,6 +86,52 @@ This is not meant to be an exhaustive collection. It is a personal selection of 
 
 | Year | Paper | Key Takeaways & Description |
 | :--- | :---- | :-------------------------- |
+
+---
+
+## Learning Resources
+
+The paper collection above is complemented by an ordered learning path and a small set of deeper resources. The foundations sequence interleaves visual intuition with implementation; the deep dives are alternatives to choose from, not additional courses to complete in order. Inclusion is a scoped recommendation, not a claim to have completed every linked exercise or course.
+
+### Foundations: From Neural Networks to LLMs
+
+**Start with:** basic Python. Familiarity with vectors, matrices, and elementary derivatives helps; the early videos build the intuition before the coding lectures.
+
+Follow the sequence below. It moves from neural networks and gradients to language modeling, transformers, tokenization, and the full model lifecycle. Karpathy's final overview deliberately comes last as a synthesis rather than another introduction.
+
+| Step | Resource | What it adds |
+| :---: | :--- | :--- |
+| 1 | **3Blue1Brown:** [What is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk) | Neurons, weights, activations, and the matrix view of a network. |
+| 2 | **3Blue1Brown:** [Gradient descent](https://www.youtube.com/watch?v=IHZwWFHWa-w) | Loss landscapes, gradients, and parameter updates. |
+| 3 | **3Blue1Brown:** [Backpropagation, intuitively](https://www.youtube.com/watch?v=Ilg3gGewQ5U) | How output error is attributed to upstream parameters. |
+| 4 | **3Blue1Brown:** [Backpropagation calculus](https://www.youtube.com/watch?v=tIeHLnjs5U8) | The chain rule behind the computation. |
+| 5 | **Andrej Karpathy:** [Building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0) | Reverse-mode autodifferentiation, a neural network, and a training loop implemented from scratch. |
+| 6 | **Andrej Karpathy:** [Building makemore, Part 1](https://www.youtube.com/watch?v=PaCmpygFfXo) | A first language model using bigrams, tensors, probabilities, and optimization. |
+| 7 | **3Blue1Brown:** [What is cross-entropy?](https://www.youtube.com/watch?v=GlYgs6v2YfU) | The prediction objective through probability and information-theoretic intuition. |
+| 8 | **Andrej Karpathy:** [Building makemore, Part 2: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I) | Embeddings, context, minibatches, and generalization in a neural language model. |
+| 9 | **3Blue1Brown:** [Transformers, the technology behind LLMs](https://www.youtube.com/watch?v=wjZofJX0v4M) | An end-to-end map from tokens and embeddings to next-token predictions. |
+| 10 | **3Blue1Brown:** [Attention in transformers](https://www.youtube.com/watch?v=eMlx5fFNoYc) | Queries, keys, values, and how token representations exchange information. |
+| 11 | **3Blue1Brown:** [How might LLMs store facts?](https://www.youtube.com/watch?v=9-Jl0dxWQs8) | Transformer MLPs, representations, and distributed knowledge. |
+| 12 | **Andrej Karpathy:** [Let's build GPT](https://www.youtube.com/watch?v=kCc8FmEb1nY) | Assemble a working decoder-only transformer and inspect its training and generation loops. |
+| 13 | **Andrej Karpathy:** [Let's build the GPT tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE) | Byte-pair encoding, Unicode, special tokens, and the text-to-model interface. |
+| 14 | **Andrej Karpathy:** [Deep Dive into LLMs like ChatGPT](https://www.youtube.com/watch?v=7xTGNNLPyMI) | Connect pretraining, inference, supervised fine-tuning, and reinforcement learning to assistant behavior. |
+
+**Companion code:** [micrograd](https://github.com/karpathy/nn-zero-to-hero/tree/master/lectures/micrograd), [makemore notebooks](https://github.com/karpathy/nn-zero-to-hero/tree/master/lectures/makemore), [Build GPT notebook](https://colab.research.google.com/drive/1JMLa53HDuA-i7ZBmqV7ZnA3c_fvtXnx-), and [minbpe](https://github.com/karpathy/minbpe). Run and inspect code where it helps: understanding a lecture and implementing the mechanism independently are different outcomes.
+
+This is a selected sequence, not the full catalogs of either author. The later makemore lectures and *Let's reproduce GPT-2* are optional extensions, not prerequisites for moving on.
+
+### Selected Deep Dives & Practice
+
+Pick a resource to answer a specific question after the foundations. Course editions matter: lecture numbers below refer to the stated edition.
+
+| Resource | Starting point | Why choose it |
+| :--- | :--- | :--- |
+| **[ARENA: Ray Tracing with PyTorch](https://learn.arena.education/chapter0_fundamentals/01_ray_tracing/intro/)** | Hands-on practice: rays and segments, then batched operations. Requires basic Python and linear algebra. | Build confidence with tensor shapes, broadcasting, and `einops`; a practical bridge beyond watching training-loop explanations. |
+| **[Stanford CS329Z: Engineering AI Agents](https://cs329z.stanford.edu/)** | Autumn 2026: lectures 6 (design patterns), 7 (memory), 8 (multi-agent systems), and the Terminal-Bench guest lecture. [Recordings](https://www.youtube.com/playlist?list=PLPRcF5HR02_U). | Connect LLM foundations to agent architectures, coordination, state, and evaluation. Use the course schedule rather than the playlist's upload order. |
+| **[Stanford CS336: Language Modeling from Scratch](https://stanford-cs336.github.io/)** | Spring 2026: lectures 4 (attention alternatives/MoE), 10 (inference), 12 (evaluation), and 15-16 (post-training). [Recordings](https://www.youtube.com/playlist?list=PLoROMvodv4rMqXOcazWaTUHhq-yembLCV). | Go deeper into model mechanisms and systems trade-offs. The full course and assignments require substantial Python, PyTorch, math, and systems preparation; selected lectures need not imply doing the entire course. |
+| **Stanford CS25: two selected seminars** | [On the Biology of a Large Language Model](https://www.youtube.com/watch?v=vRQs7qfIDaU) (Josh Batson, 2025); [On the Tradeoffs of State Space Models and Transformers](https://www.youtube.com/watch?v=OyimE74UMF8) (Albert Gu, 2026). | Choose mechanistic interpretability or architecture trade-offs. These are research seminars, not a second introductory transformer course. |
+
+For safety, control, and adversarial evaluation, see the companion [Awesome AI Security Papers](https://github.com/zTehRyaN/awesome-ai-security-papers) collection.
 
 ---
 
