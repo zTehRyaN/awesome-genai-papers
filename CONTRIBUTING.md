@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to this curated list of Generative AI research.
 
-I welcome milestone papers and a small number of complementary learning resources. Paper contributions must follow the table format below; courses, tutorials, and lectures belong in the separate Learning Resources section.
+I welcome research papers and selected learning resources. Follow the paper table format below for research entries, and place courses, tutorials, and lectures in the Learning resources section.
 
 ## How to Add a Paper
 
@@ -42,15 +42,15 @@ Place the paper under one of the six categories:
 - **Provide Context**: Only if there is a genuinely impactful quote or takeaway, append it with `<br><br> _"Quote text"_`. If there is no standout insight, omit the quote entirely.
 - **Working Links**: Ensure your link resolves correctly to the paper (e.g., arXiv, Nature, or the primary blog post).
 
-## How to Suggest a Learning Resource
+## How to suggest a learning resource
 
-Use a pull request with a brief explanation of the resource's value and its overlap with existing entries.
+In the pull request, explain what the resource teaches and how it differs from the existing entries.
 
 - Preserve the order of the 14-step foundations path unless the change includes a pedagogical reason. Do not expand it to an author's entire catalog by default.
-- For deep dives and practice, follow the existing `Resource | Starting point | Why choose it` table. Name prerequisites, a useful chapter or lecture, and the course edition when relevant.
-- Prefer freely accessible original resources and official companion code. Link directly to the selected material rather than a generic channel or course marketplace.
+- For further study and practice, follow the existing `Resource | Starting point | Why choose it` table. Name prerequisites, a useful chapter or lecture, and the course edition when relevant.
+- Prefer freely accessible original resources and official companion code. Link to the selected material so readers can find the relevant chapter or lecture without searching a channel or course marketplace.
 - Explain what the resource adds. Avoid duplicate introductions, promotional lists, personal completion claims, and private course or application materials.
-- Keep learning entries separate from the six paper categories. They are curated by learning order or purpose, not by publication year; paper formatting and category rules remain unchanged.
+- Order learning entries by learning sequence or purpose, and keep them separate from the six paper categories. The existing paper format, categories, and year ordering still apply to research entries.
 - Check links and descriptions, and keep descriptions concise and in English.
 
 Thanks for contributing.
