@@ -91,7 +91,7 @@ For an introduction, follow the [foundations path](#foundations-from-neural-netw
 
 ## Learning resources
 
-The foundations path alternates visual explanations with code so that each implementation builds on concepts introduced earlier. Afterward, choose further study by topic. The linked courses extend beyond the material recommended here, and listing them does not imply that every lesson or exercise has been completed.
+The foundations path alternates visual explanations with code so that each implementation builds on concepts introduced earlier. Afterward, choose further study by topic.
 
 ### Foundations: from neural networks to LLMs
 
@@ -99,7 +99,7 @@ You should know basic Python. Familiarity with vectors, matrices, and elementary
 
 The sequence starts with neural networks and gradients, then develops language modeling, transformers, and tokenization. Karpathy's final overview brings these mechanisms together into an account of how modern assistants are trained and used.
 
-| Step | Resource | What it adds |
+| Step | Resource | tldr |
 | :---: | :--- | :--- |
 | 1 | 3Blue1Brown: [What is a neural network?](https://www.youtube.com/watch?v=aircAruvnKk) | Neurons, weights, activations, and the matrix view of a network. |
 | 2 | 3Blue1Brown: [Gradient descent](https://www.youtube.com/watch?v=IHZwWFHWa-w) | Loss landscapes, gradients, and parameter updates. |
